@@ -1,0 +1,28 @@
+Restauration projet Laravel
+
+
+composer install
+npm install
+
+nouveau .env depuis .env.example : 
+
+	- APP_NAME=Larablog
+	- DB_DATABASE=larablog
+
+php artisan key:generate
+
+mysql -u root -p
+create database larablog;
+exit
+
+php artisan migrate --seed
+
+mysql -u root -p
+use larablog;
+source C:\laragon\www\LaraBlog
+exit
+
+php artisan migrate --seed
+npm run build
+
+php artisan serve
